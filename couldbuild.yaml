@@ -1,14 +1,9 @@
 steps:
 - id: go_test
   name: 'gcr.io/cloud-builders/go'
+  env: ['GOPATH=.']
   args: ['test','somapp']
-  env: ['GOPATH=.']
 
-- id: go_build
-  name: 'gcr.io/cloud-builders/go'
-  args: ['build','somapp']
-  env: ['GOPATH=.']
-  
 - id: image_build
   name: 'gcr.io/cloud-builders/docker'
   args:
