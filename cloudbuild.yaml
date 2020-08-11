@@ -1,7 +1,7 @@
 steps:
 - id: go_test
   name: 'gcr.io/cloud-builders/go'
-  env: ['GOPATH=.']
+  env: ['GOPATH=./src/somaapp']
   args: ['test','somapp']
 
 - id: image_build
